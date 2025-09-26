@@ -1,0 +1,220 @@
+// ====================================
+// Teste Completo do MiniJS Compiler
+// ====================================
+
+// 1. DECLARAÇÃO DE VARIÁVEIS
+let nome = "MiniJS Compiler";
+const versao = 1.0;
+var ativo = true;
+
+console.log("=== Teste de Variáveis ===");
+console.log("Nome do projeto:", nome);
+console.log("Versão:", versao);
+console.log("Status ativo:", ativo);
+
+// 2. OPERAÇÕES MATEMÁTICAS
+let a = 10;
+let b = 20;
+let soma = a + b;
+let subtracao = b - a;
+let multiplicacao = a * b;
+let divisao = b / a;
+let resto = b % 3;
+
+console.log("=== Operações Matemáticas ===");
+console.log("Soma:", soma);
+console.log("Subtração:", subtracao);
+console.log("Multiplicação:", multiplicacao);
+console.log("Divisão:", divisao);
+console.log("Resto:", resto);
+
+// 3. ESTRUTURAS CONDICIONAIS
+console.log("=== Estruturas Condicionais ===");
+
+if (a < b) {
+    console.log("A é menor que B");
+} else {
+    console.log("A é maior ou igual a B");
+}
+
+let idade = 18;
+if (idade >= 18) {
+    console.log("Maior de idade");
+} else if (idade >= 16) {
+    console.log("Adolescente");
+} else {
+    console.log("Criança");
+}
+
+// 4. LOOPS
+console.log("=== Estruturas de Repetição ===");
+
+// While
+console.log("Loop While:");
+let contador = 0;
+while (contador < 3) {
+    console.log("  Contador while:", contador);
+    contador = contador + 1;
+}
+
+// For
+console.log("Loop For:");
+for (let i = 0; i < 3; i = i + 1) {
+    console.log("  Iteração for:", i);
+}
+
+// Do-While
+console.log("Loop Do-While:");
+let x = 0;
+do {
+    console.log("  Valor do-while:", x);
+    x = x + 1;
+} while (x < 3);
+
+// 5. FUNÇÕES
+console.log("=== Funções ===");
+
+function saudacao(nome) {
+    console.log("Olá,", nome);
+    return "Saudação enviada";
+}
+
+function calcular(num1, num2, operacao) {
+    let resultado = 0;
+
+    if (operacao == "soma") {
+        resultado = num1 + num2;
+    } else if (operacao == "subtracao") {
+        resultado = num1 - num2;
+    } else if (operacao == "multiplicacao") {
+        resultado = num1 * num2;
+    } else if (operacao == "divisao") {
+        resultado = num1 / num2;
+    }
+
+    return resultado;
+}
+
+// Chamadas de função
+let msgRetorno = saudacao("Estudante");
+console.log("Retorno:", msgRetorno);
+
+let resultadoCalculo = calcular(10, 5, "soma");
+console.log("10 + 5 =", resultadoCalculo);
+
+// 6. FUNÇÃO RECURSIVA
+function fatorial(n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * fatorial(n - 1);
+}
+
+console.log("=== Recursão ===");
+console.log("Fatorial de 5:", fatorial(5));
+
+// 7. ARRAYS
+console.log("=== Arrays ===");
+let numeros = [1, 2, 3, 4, 5];
+let frutas = ["maçã", "banana", "laranja"];
+let misto = [1, "texto", true, null];
+
+console.log("Array de números:", numeros);
+console.log("Array de frutas:", frutas);
+console.log("Array misto:", misto);
+
+// Acessando elementos
+console.log("Primeira fruta:", frutas[0]);
+console.log("Último número:", numeros[4]);
+
+// 8. OBJETOS
+console.log("=== Objetos ===");
+let pessoa = {
+    nome: "João Silva",
+    idade: 25,
+    ativo: true,
+    cidade: "Belém"
+};
+
+let carro = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    ano: 2022,
+    cor: "Prata"
+};
+
+console.log("Objeto pessoa:", pessoa);
+console.log("Objeto carro:", carro);
+
+// Acessando propriedades
+console.log("Nome da pessoa:", pessoa.nome);
+console.log("Marca do carro:", carro.marca);
+
+// 9. OPERADORES LÓGICOS
+console.log("=== Operadores Lógicos ===");
+let verdadeiro = true;
+let falso = false;
+
+console.log("true && false:", verdadeiro && falso);
+console.log("true || false:", verdadeiro || falso);
+console.log("!true:", !verdadeiro);
+
+// Expressões complexas
+let idadeMinima = 18;
+let idadeMaxima = 65;
+let idadePessoa = 30;
+
+if (idadePessoa >= idadeMinima && idadePessoa <= idadeMaxima) {
+    console.log("Idade dentro do intervalo permitido");
+}
+
+// 10. OPERADORES DE COMPARAÇÃO
+console.log("=== Comparações ===");
+console.log("10 == 10:", 10 == 10);
+console.log("10 != 5:", 10 != 5);
+console.log("10 > 5:", 10 > 5);
+console.log("5 < 10:", 5 < 10);
+console.log("10 >= 10:", 10 >= 10);
+console.log("5 <= 10:", 5 <= 10);
+
+// 11. INCREMENTO E DECREMENTO
+console.log("=== Incremento/Decremento ===");
+let valor = 10;
+console.log("Valor inicial:", valor);
+valor++;
+console.log("Após incremento:", valor);
+valor--;
+console.log("Após decremento:", valor);
+
+// 12. FUNÇÃO MAIN (similar ao padrão C/Java)
+function main() {
+    console.log("=== Função Main ===");
+    console.log("Iniciando programa principal...");
+
+    let resultado = 0;
+    for (let i = 1; i <= 5; i = i + 1) {
+        resultado = resultado + i;
+    }
+
+    console.log("Soma de 1 a 5:", resultado);
+    console.log("Programa finalizado!");
+
+    return 0;
+}
+
+// Executar função main
+let statusFinal = main();
+console.log("Status de saída:", statusFinal);
+
+// 13. COMENTÁRIOS
+// Este é um comentário de linha
+
+/*
+   Este é um comentário
+   de múltiplas linhas
+   que pode conter várias
+   informações sobre o código
+*/
+
+console.log("=== FIM DO TESTE ===");
+console.log("Todos os recursos da linguagem MiniJS foram testados!");

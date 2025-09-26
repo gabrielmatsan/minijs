@@ -1,0 +1,23 @@
+// Teste específico para console.log
+
+let nome = "MiniJS";
+let versao = 1.0;
+
+console.log("Iniciando teste do compilador");
+console.log("Linguagem: ", nome);
+console.log("Versão: ", versao);
+
+function testar() {
+    console.log("Dentro da função testar");
+
+    let x = 10;
+    if (x > 5) {
+        console.log("X é maior que 5");
+    }
+
+    for (let i = 0; i < 3; i = i + 1) {
+        console.log("Iteração: ", i);
+    }
+}
+
+console.log("Fim do teste");

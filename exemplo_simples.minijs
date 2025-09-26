@@ -1,0 +1,49 @@
+// ====================================
+// Exemplo Simples - MiniJS
+// Perfeito para começar!
+// ====================================
+
+// 1. Declarar variáveis
+let meuNome = "Estudante";
+let minhaIdade = 20;
+const universidade = "CESUPA";
+
+// 2. Mostrar informações
+console.log("=== Minha Apresentação ===");
+console.log("Nome:", meuNome);
+console.log("Idade:", minhaIdade);
+console.log("Universidade:", universidade);
+
+// 3. Fazer alguns cálculos
+let anoAtual = 2025;
+let anoNascimento = anoAtual - minhaIdade;
+
+console.log("=== Cálculos ===");
+console.log("Ano de nascimento:", anoNascimento);
+
+// 4. Usar uma função
+function saudar(nome) {
+    console.log("Olá,", nome, "!");
+    console.log("Bem-vindo ao MiniJS!");
+}
+
+console.log("=== Saudação ===");
+saudar(meuNome);
+
+// 5. Usar estrutura condicional
+console.log("=== Verificações ===");
+if (minhaIdade >= 18) {
+    console.log("Você é maior de idade!");
+} else {
+    console.log("Você é menor de idade!");
+}
+
+// 6. Usar um loop
+console.log("=== Contagem ===");
+console.log("Contando até 5:");
+for (let i = 1; i <= 5; i = i + 1) {
+    console.log("Número:", i);
+}
+
+console.log("=== Fim do Programa ===");
+console.log("Parabéns! Seu primeiro programa MiniJS funcionou!");
